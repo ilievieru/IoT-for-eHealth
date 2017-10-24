@@ -1,0 +1,18 @@
+Vultur Ovidiu:
+ - Architecture (preliminary)
+ - Core class diagram
+ - Core use case diagram
+ - Description and Core+Microservices part from the Requirements Analysis
+
+Policiuc Abel:
+ - Planner class diagram
+ - Planner flow diagram
+ - Planner section in Requierments Analysis
+
+Vieru Ilie:
+ - Package diagram
+ - DB layer diagram
+ - Core and decision making part from the Requirements Analysis
+
+Andrisan Danut:
+ - Security part from the Requirements Analysis
