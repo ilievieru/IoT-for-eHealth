@@ -3,16 +3,16 @@ package pki.registrationAuthority;
 import pki.utility.CSR;
 import pki.utility.DigitalCertificate;
 
-public class RSingletonegistrationAuthority {
+public class SingletonRegistrationAuthority {
 
-	private static RSingletonegistrationAuthority instance = new RSingletonegistrationAuthority();
+	private static SingletonRegistrationAuthority instance = new SingletonRegistrationAuthority();
 
-	private RSingletonegistrationAuthority() {
+	private SingletonRegistrationAuthority() {
 	}
 
-	public static RSingletonegistrationAuthority getInstance() {
+	public static SingletonRegistrationAuthority getInstance() {
 		if (instance == null) {
-			instance = new RSingletonegistrationAuthority();
+			instance = new SingletonRegistrationAuthority();
 		}
 		return instance;
 	}

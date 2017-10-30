@@ -7,7 +7,7 @@ import pki.validationAuthority.SingletonValidationAuthority;
 
 public class SingletonCertificateAuthority {
 	
-	private RSingletonegistrationAuthority registration;
+	private SingletonRegistrationAuthority registration;
 	private SingletonValidationAuthority validation;
 	
 	private static SingletonCertificateAuthority instance = new SingletonCertificateAuthority();
