@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Publication Feed">
+  <meta name="author" content="Vultur Ovidiu Alexandru, Tanase Ioana Alexandra">
+
+  <title>Publication Feed</title>
+  <style>
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+  </style>
+</head>
+
+<body>
+  <p><h2>Hello there! I am the publisher.</h2></p>
+  <p>Below is my following API: </p>
+  <table>
+    <th>URL</th>
+    <th>Method</th>
+    <th>Description</th>
+    <tr>
+      <td>/Subscribe/{ip}/{port}</td>
+      <td>GET</td>
+      <td> Subscribe a broker to the raw data.</td>
+    </tr>
+    <tr>
+      <td>/Unsubscribe/{ip}/{port}</td>
+      <td>GET</td>
+      <td> Unsubscribe a broker from the raw data.</td>
+    </tr>
+    <tr>
+      <td><a href="/Publish">/Publish</a></td>
+      <td>GET</td>
+      <td> Generate and send a publication.</td>
+    </tr>
+    <tr>
+      <td><a href="/PublishStart/1000">/PublishStart/{intervalMs}</a></td>
+      <td>GET</td>
+      <td> Generate and send publications continuously at the specified interval.</td>
+    </tr>
+    <tr>
+      <td><a href="/PublishStop/">/PublishStop</a></td>
+      <td>GET</td>
+      <td> Stop the previously started generation and sending of publications.</td>
+    </tr>
+  </table>
+</body>
+</html>
