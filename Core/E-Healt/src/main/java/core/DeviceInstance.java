@@ -19,6 +19,7 @@ public class DeviceInstance {
         }
 
         instance = factoryDevice.getDevice(deviceType);
+        instance.setDeviceId(deviceId);
         devices.add(instance);
         return instance;
     }

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Core/E-Healt/E-Healt.iml" filepath="$PROJECT_DIR$/Core/E-Healt/E-Healt.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IoT-for-eHealth.iml" filepath="$PROJECT_DIR$/IoT-for-eHealth.iml" />
+    </modules>
+  </component>
+</project>
