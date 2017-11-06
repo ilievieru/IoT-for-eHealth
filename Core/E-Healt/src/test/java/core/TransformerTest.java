@@ -2,7 +2,7 @@ package core;
 
 import database.Transformer;
 import database.entities.AbstractEntities;
-import devices.AbstractDevice;
+import devices.abstractFactory.AbstractDevice;
 import org.junit.Assert;
 import org.junit.Test;
 

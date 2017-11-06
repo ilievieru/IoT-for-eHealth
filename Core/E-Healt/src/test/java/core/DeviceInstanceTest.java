@@ -1,6 +1,6 @@
 package core;
 
-import devices.AbstractDevice;
+import devices.abstractFactory.AbstractDevice;
 import org.junit.Assert;
 import org.junit.Test;
 

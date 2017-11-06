@@ -3,7 +3,7 @@ package core;
 import database.Transformer;
 import database.entities.AbstractEntities;
 import database.services.AbstractServices;
-import devices.AbstractDevice;
+import devices.abstractFactory.AbstractDevice;
 
 public abstract class DataParser {
 

@@ -1,31 +1,15 @@
 package agents;
 
-import java.util.Date;
+import agents.person.Persons;
 
-public class Patient {
-    private String name;
-    private Date dateOfBirth;
+public class Patient extends Persons{
+
     private Double height;
     private String eyeColor;
     private int heartRate;
+    private Doctors doctor;
 
     public Patient() {
-    }
-
-    public Patient(String name, Date dateOfBirth, Double height, String eyeColor, int heartRate) {
-        this.name = name;
-        this.dateOfBirth = dateOfBirth;
-        this.height = height;
-        this.eyeColor = eyeColor;
-        this.heartRate = heartRate;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public Date getDateOfBirth() {
-        return dateOfBirth;
     }
 
     public Double getHeight() {
@@ -40,12 +24,8 @@ public class Patient {
         return heartRate;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setDateOfBirth(Date dateOfBirth) {
-        this.dateOfBirth = dateOfBirth;
+    public Doctors getDoctor() {
+        return doctor;
     }
 
     public void setHeight(Double height) {
@@ -58,5 +38,9 @@ public class Patient {
 
     public void setHeartRate(int heartRate) {
         this.heartRate = heartRate;
+    }
+
+    public void setDoctor(Doctors doctor) {
+        this.doctor = doctor;
     }
 }

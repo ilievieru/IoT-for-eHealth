@@ -1,36 +1,21 @@
 package agents;
 
-import java.util.Date;
+import agents.person.Persons;
 
-public class Nurse {
-    private String name;
-    private int age;
-    private Date dateOfBirth;
+import java.util.List;
+
+public class Nurse extends Persons {
+
+    private List<Patient> patients;
 
     public Nurse() {
     }
 
-    public String getName() {
-        return name;
+    public List<Patient> getPatients() {
+        return patients;
     }
 
-    public int getAge() {
-        return age;
-    }
-
-    public Date getDateOfBirt() {
-        return dateOfBirth;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    public void setDateOfBirt(Date dateOfBirt) {
-        this.dateOfBirth = dateOfBirt;
+    public void setPatients(List<Patient> patients) {
+        this.patients = patients;
     }
 }

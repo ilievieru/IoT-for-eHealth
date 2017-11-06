@@ -1,7 +1,7 @@
 package core;
 
-import devices.AbstractDevice;
-import devices.FactoryDevice;
+import devices.abstractFactory.AbstractDevice;
+import devices.abstractFactory.FactoryDevice;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,7 +1,7 @@
 package database;
 
 import database.entities.AbstractEntities;
-import devices.AbstractDevice;
+import devices.abstractFactory.AbstractDevice;
 
 public class Transformer {
 

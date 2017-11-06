@@ -1,11 +1,13 @@
 package devices;
 
+import devices.abstractFactory.AbstractDevice;
+
 public class Device extends AbstractDevice {
 
     public Device(){
-        this.deviceType = "SmartPhone";
-        this.deviceId = 1;
-        this.deviceName = "Device de test";
-        System.out.println("Smartphone created");
+        this.setDeviceId(1);
+        this.setDeviceName("Device de test");
+        this.setDeviceType("Device");
+        System.out.println("Device created");
     }
 }
