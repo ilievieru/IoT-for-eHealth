@@ -4,23 +4,26 @@ import devices.Bracelet;
 import devices.Device;
 import devices.Smartphone;
 
+import java.util.Map;
+
 public class FactoryDevice {
 
-    public AbstractDevice getDevice(String deviceType){
+    public AbstractDevice getDevice(Map<String, String> data) {
 
-        if(deviceType.equalsIgnoreCase("Device")){
-            return new Device();
+        if (data.get("type").equalsIgnoreCase("Device")) {
+            return new Device(data);
         }
 
-        if(deviceType.equalsIgnoreCase("Smartphone")){
-            return new Smartphone();
+        if (data.get("type").equalsIgnoreCase("Smartphone")) {
+            return new Smartphone(data);
         }
 
-        if(deviceType.equalsIgnoreCase("Bracelet")){
-            return new Bracelet();
+        if (data.get("type").equalsIgnoreCase("Bracelet")) {
+            return new Bracelet(data);
         }
 
-        return null;
+        return new AbstractDevice() {
+        };
     }
 
 }

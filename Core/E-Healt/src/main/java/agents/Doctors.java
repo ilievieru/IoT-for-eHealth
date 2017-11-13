@@ -6,9 +6,7 @@ import java.util.List;
 
 public class Doctors extends Persons {
 
-
     private List<Patient> patients;
-
 
     public Doctors() {
     }

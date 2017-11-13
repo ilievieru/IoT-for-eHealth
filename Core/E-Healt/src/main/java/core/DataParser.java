@@ -4,27 +4,37 @@ import database.Transformer;
 import database.entities.AbstractEntities;
 import database.services.AbstractServices;
 import devices.abstractFactory.AbstractDevice;
+import org.springframework.web.bind.annotation.RestController;
 
-public abstract class DataParser {
+import java.util.Map;
 
-    String deviceType;
-    int deviceId;
+@RestController
+public class DataParser {
 
-    public abstract void readData();
+    public boolean isRelevant(String type) {
+        if (type.equalsIgnoreCase("Device")) {
+            return relevantDeviceData();
+        }
+        if (type.equalsIgnoreCase("Bracelet")) {
+            return relevantBraceletData();
+        }
+        if (type.equalsIgnoreCase("Smartphone")) {
+            return relevantSmartphoneData();
+        }
+        return true;
+    }
 
-    public abstract boolean isRelevant();
-
-    public AbstractDevice createSingleDevice() {
+    public AbstractDevice createSingleDevice(Map<String, String> data) {
         AbstractDevice device = null;
-        if (isRelevant()) {
-           device = DeviceInstance.getInstance(deviceId, deviceType);
+        if (isRelevant(data.get("type"))) {
+            device = DeviceInstance.getInstance(data);
         }
         return device;
     }
 
-    public void saveInstanceDevice() {
-        if (isRelevant()) {
-            AbstractDevice device = DeviceInstance.getInstance(deviceId, deviceType);
+    public void saveInstanceDevice(Map<String, String> data) {
+        if (isRelevant(data.get("type"))) {
+            AbstractDevice device = DeviceInstance.getInstance(data);
             Transformer transformer = new Transformer();
             AbstractEntities entities = transformer.transformDeviceToEntity(device);
             AbstractServices abstractServices = new AbstractServices();
@@ -32,11 +42,15 @@ public abstract class DataParser {
         }
     }
 
-    public void setDeviceType(String deviceType) {
-        this.deviceType = deviceType;
+    private Boolean relevantBraceletData() {
+        return true;
     }
 
-    public void setDeviceId(int deviceId) {
-        this.deviceId = deviceId;
+    private Boolean relevantDeviceData() {
+        return true;
+    }
+
+    private Boolean relevantSmartphoneData() {
+        return true;
     }
 }
